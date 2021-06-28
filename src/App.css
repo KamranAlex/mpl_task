@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 .App {
   font-family: 'Roboto', sans-serif;
+  background-color: rgb(231, 231, 231);
+  height: 100vh;
 }

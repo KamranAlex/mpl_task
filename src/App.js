@@ -1,12 +1,14 @@
 import './App.css';
-import HotelRateTable from './components/HotelRateTable/HotelRateTable';
+import MainContent from './components/MainContent/MainContent';
 import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   return (
     <div className='App'>
-      <Sidebar></Sidebar>
-      <HotelRateTable></HotelRateTable>
+      <div className='d-flex'>
+        <Sidebar></Sidebar>
+        <MainContent></MainContent>
+      </div>
     </div>
   );
 }

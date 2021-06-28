@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Header from '../Header/Header';
 
-const HotelRateTable = () => {
+const MainContent = () => {
   const [info, setInfo] = useState([]);
   useEffect(() => {
     fetch(
@@ -12,7 +13,11 @@ const HotelRateTable = () => {
         setInfo(data);
       });
   }, []);
-  return <div></div>;
+  return (
+    <div className='main-content'>
+      <Header></Header>
+    </div>
+  );
 };
 
-export default HotelRateTable;
+export default MainContent;
