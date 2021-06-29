@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainContent.css';
+import fakeData from '../fakeData';
 
 const DailyTable = () => {
   return (
@@ -13,29 +14,53 @@ const DailyTable = () => {
           <th scope='col'>our rate is</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>Jacob</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>Larry</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
+      {fakeData.length > 0 ? (
+        <tbody>
+          {fakeData.map((data, index) => {
+            const priceDiff = data.todaysPrice - data.comparePrice;
+            const status = (difference) => {
+              let color = '';
+              let text = '';
+              let borderColor = '';
+              if (difference < 0) {
+                borderColor = '#1eb97233';
+                color = '#1EB972';
+                text = 'Lower';
+              } else if (difference === 0) {
+                borderColor = '#f1ae2d33';
+                color = '#FFC75F';
+                text = 'Even';
+              } else if (difference > 0) {
+                borderColor = '#e94f3033';
+                color = '#E94F30';
+                text = 'Higher';
+              }
+              return { borderColor, color, text };
+            };
+            return (
+              <tr key={index}>
+                <td
+                  style={{
+                    borderLeft: '6px solid' + status(priceDiff).borderColor
+                  }}
+                >
+                  {data.name}
+                </td>
+                <td>${data.todaysPrice}</td>
+                <td>${data.comparePrice}</td>
+                <td style={{ color: status(priceDiff).color }}>${priceDiff}</td>
+                <td style={{ color: status(priceDiff).color }}>
+                  {status(priceDiff).text}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      ) : (
+        <tbody>
+          <p className='loading'>Loading Data...</p>
+        </tbody>
+      )}
     </table>
   );
 };

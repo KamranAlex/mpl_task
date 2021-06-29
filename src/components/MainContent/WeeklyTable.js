@@ -11,9 +11,7 @@ const WeeklyTable = () => {
       .then((res) => res.json())
       .then((data) => {
         setBodyInfo(data.rateBody);
-        console.log(data.rateBody[0].day1);
         setLabels(data.rateLabels);
-        console.log(data.rateLabels);
       });
   }, []);
   return (
@@ -32,7 +30,7 @@ const WeeklyTable = () => {
             </tr>
           </thead>
           <tbody>
-            {bodyInfo.map((info) => {
+            {bodyInfo.map((info, index) => {
               const getStyle = (price) => {
                 let priceColor = '';
                 if (price < 0) {
@@ -45,7 +43,7 @@ const WeeklyTable = () => {
                 return priceColor;
               };
               return (
-                <tr>
+                <tr key={index}>
                   <td>{info.name}</td>
                   <td>
                     {info.day1 === null ? (
@@ -53,13 +51,13 @@ const WeeklyTable = () => {
                     ) : (
                       <>
                         <span className='other-price'>
-                          {info.day1.otherPrice}
+                          ${info.day1.otherPrice}
                         </span>{' '}
                         <span
                           className='compare-price'
                           style={{ color: getStyle(info.day1.compare) }}
                         >
-                          {info.day1.compare}
+                          ${info.day1.compare}
                         </span>
                       </>
                     )}
@@ -71,13 +69,13 @@ const WeeklyTable = () => {
                     ) : (
                       <>
                         <span className='other-price'>
-                          {info.day2.otherPrice}
+                          ${info.day2.otherPrice}
                         </span>{' '}
                         <span
                           className='compare-price'
                           style={{ color: getStyle(info.day2.compare) }}
                         >
-                          {info.day2.compare}
+                          ${info.day2.compare}
                         </span>
                       </>
                     )}
@@ -89,13 +87,13 @@ const WeeklyTable = () => {
                     ) : (
                       <>
                         <span className='other-price'>
-                          {info.day3.otherPrice}
+                          ${info.day3.otherPrice}
                         </span>{' '}
                         <span
                           className='compare-price'
                           style={{ color: getStyle(info.day3.compare) }}
                         >
-                          {info.day3.compare}
+                          ${info.day3.compare}
                         </span>
                       </>
                     )}
@@ -107,13 +105,13 @@ const WeeklyTable = () => {
                     ) : (
                       <>
                         <span className='other-price'>
-                          {info.day4.otherPrice}
+                          ${info.day4.otherPrice}
                         </span>{' '}
                         <span
                           className='compare-price'
                           style={{ color: getStyle(info.day4.compare) }}
                         >
-                          {info.day4.compare}
+                          ${info.day4.compare}
                         </span>
                       </>
                     )}
@@ -125,13 +123,13 @@ const WeeklyTable = () => {
                     ) : (
                       <>
                         <span className='other-price'>
-                          {info.day5.otherPrice}
+                          ${info.day5.otherPrice}
                         </span>{' '}
                         <span
                           className='compare-price'
                           style={{ color: getStyle(info.day5.compare) }}
                         >
-                          {info.day5.compare}
+                          ${info.day5.compare}
                         </span>
                       </>
                     )}
@@ -143,13 +141,13 @@ const WeeklyTable = () => {
                     ) : (
                       <>
                         <span className='other-price'>
-                          {info.day6.otherPrice}
+                          ${info.day6.otherPrice}
                         </span>{' '}
                         <span
                           className='compare-price'
                           style={{ color: getStyle(info.day6.compare) }}
                         >
-                          {info.day6.compare}
+                          ${info.day6.compare}
                         </span>
                       </>
                     )}
@@ -161,13 +159,13 @@ const WeeklyTable = () => {
                     ) : (
                       <>
                         <span className='other-price'>
-                          {info.day7.otherPrice}
+                          ${info.day7.otherPrice}
                         </span>{' '}
                         <span
                           className='compare-price'
                           style={{ color: getStyle(info.day7.compare) }}
                         >
-                          {info.day7.compare}
+                          ${info.day7.compare}
                         </span>
                       </>
                     )}
