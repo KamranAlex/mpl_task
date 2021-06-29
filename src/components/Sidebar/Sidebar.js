@@ -11,7 +11,7 @@ import {
 import './Sidebar.css';
 const Sidebar = () => {
   return (
-    <div className='sidebar d-flex flex-column align-items-center py-4'>
+    <div className='sidebar d-flex align-items-center py-4'>
       <a href='/'>
         <FontAwesomeIcon
           icon={faTachometerAlt}

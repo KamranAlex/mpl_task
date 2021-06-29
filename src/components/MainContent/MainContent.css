@@ -19,6 +19,9 @@
   border-bottom: none !important;
   font-size: 12px !important;
   font-weight: 500;
+  text-transform: uppercase;
+  text-align: left;
+  color: #797b88;
 }
 
 .table td {

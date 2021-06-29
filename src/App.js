@@ -4,11 +4,9 @@ import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   return (
-    <div className='App'>
-      <div className='d-flex'>
-        <Sidebar></Sidebar>
-        <MainContent></MainContent>
-      </div>
+    <div className='App d-flex'>
+      <Sidebar></Sidebar>
+      <MainContent></MainContent>
     </div>
   );
 }

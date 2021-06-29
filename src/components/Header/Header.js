@@ -5,7 +5,7 @@ import { faSearch, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   return (
-    <div className='header d-flex justify-content-between my-4 mx-3'>
+    <div className='header d-flex justify-content-between m-4'>
       <div className='header-nav d-flex'>
         <a href='/'>Overview</a>
         <a href='/'>Announcements</a>
