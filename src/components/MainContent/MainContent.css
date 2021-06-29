@@ -26,9 +26,6 @@
   text-align: left;
   color: #797b88;
 }
-.table td span {
-  padding-right: 3px !important;
-}
 .table td {
   font-size: 14px !important;
 }
@@ -36,6 +33,16 @@
 .table th {
   border-top: none !important;
 }
+.table td,
+.table th {
+  padding: 0.75rem 0.5rem !important;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+.table td .other-price {
+  padding-right: 0.15rem;
+}
+
 .loading {
   font-size: 14px;
   font-weight: 500;
