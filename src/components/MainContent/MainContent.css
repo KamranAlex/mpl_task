@@ -1,5 +1,8 @@
-.comparison-section {
+.main-content {
   width: 100%;
+}
+.comparison-section {
+  width: auto;
   min-height: auto;
   background: #ffffff;
   box-shadow: 0 0 6px 3px lightgrey;
@@ -23,10 +26,22 @@
   text-align: left;
   color: #797b88;
 }
-
+.table td span {
+  margin-right: 5px !important;
+}
 .table td {
   font-size: 14px !important;
 }
+table td:nth-of-type(1) {
+  border-left: 2px solid red;
+}
 .table th {
   border-top: none !important;
+}
+.loading {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(255, 187, 0);
+  text-align: center;
+  margin: auto 0;
 }

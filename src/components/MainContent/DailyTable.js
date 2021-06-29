@@ -3,8 +3,8 @@ import './MainContent.css';
 
 const DailyTable = () => {
   return (
-    <table class='table'>
-      <thead class='thead'>
+    <table className='table'>
+      <thead className='thead'>
         <tr>
           <th scope='col'>Name</th>
           <th scope='col'>our today’s rate</th>

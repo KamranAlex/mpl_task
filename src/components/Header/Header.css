@@ -1,19 +1,20 @@
 .header {
   min-height: 50px;
-  width: 100%;
+  width: auto;
 }
 .header-nav {
   min-height: 50px;
   background: #ffffff;
   box-shadow: 0 0 6px 3px lightgrey;
-  width: 100%;
+  width: 60%;
+  gap: 2em;
+  justify-content: space-around;
+  align-items: center;
 }
 .header-nav a {
   display: inline-block;
   color: #000000;
   font-size: 14px;
-  padding: 1rem;
-  margin: auto 30px;
   width: auto;
   text-align: center;
 }
@@ -21,7 +22,7 @@
 .search {
   align-items: center;
   padding: 10px 5px;
-  margin-left: 8rem;
+  margin-left: auto;
 }
 .search p {
   display: inline-block;

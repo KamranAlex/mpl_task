@@ -1,7 +1,7 @@
 import { FormGroup, Grid, Typography, withStyles } from '@material-ui/core';
 import Switch from '@material-ui/core/Switch';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Header from '../Header/Header';
 import './MainContent.css';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
@@ -9,19 +9,7 @@ import WeeklyTable from './WeeklyTable';
 import DailyTable from './DailyTable';
 
 const MainContent = () => {
-  const [info, setInfo] = useState([]);
   const [toggled, setToggled] = useState({ checked: false });
-
-  useEffect(() => {
-    fetch(
-      'https://us-central1-stremlind-app.cloudfunctions.net/api/hotel/rate-comparison'
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setInfo(data);
-      });
-  }, []);
 
   // Making Toggle Switch
   const AntSwitch = withStyles((theme) => ({
@@ -93,7 +81,7 @@ const MainContent = () => {
           </FormGroup>
         </div>
         {/* Comparison Table */}
-        <div className='comparison-table p-4'>
+        <div className='comparison-table py-4 mx-4'>
           {toggled.checked === true ? (
             <WeeklyTable></WeeklyTable>
           ) : (
