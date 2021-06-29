@@ -27,7 +27,7 @@
   color: #797b88;
 }
 .table td span {
-  margin-right: 5px !important;
+  padding-right: 3px !important;
 }
 .table td {
   font-size: 14px !important;
