@@ -1,0 +1,29 @@
+.comparison-section {
+  width: 100%;
+  min-height: auto;
+  background: #ffffff;
+  box-shadow: 0 0 6px 3px lightgrey;
+}
+
+.comparison-section .table-top p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.comparison-section .table-top span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: none !important;
+  font-size: 12px !important;
+  font-weight: 500;
+}
+
+.table td {
+  font-size: 14px !important;
+}
+.table th {
+  border-top: none !important;
+}

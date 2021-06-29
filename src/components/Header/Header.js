@@ -7,11 +7,11 @@ const Header = () => {
   return (
     <div className='header d-flex justify-content-between my-4 mx-3'>
       <div className='header-nav d-flex'>
-        <a href=''>Overview</a>
-        <a href=''>Announcements</a>
-        <a href=''>Tasks & Notes</a>
-        <a href=''> Daily Checklists</a>
-        <a href=''>Requests</a>
+        <a href='/'>Overview</a>
+        <a href='/'>Announcements</a>
+        <a href='/'>Tasks & Notes</a>
+        <a href='/'> Daily Checklists</a>
+        <a href='/'>Requests</a>
       </div>
       <div className='search d-flex justify-content-around'>
         <FontAwesomeIcon
